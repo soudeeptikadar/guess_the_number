@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guess the Number Game</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Guess the Number Game</h1>
+        <div class="settings">
+            <label for="difficulty">Difficulty:</label>
+            <select id="difficulty">
+                <option value="easy">Easy (1-50)</option>
+                <option value="medium" selected>Medium (1-100)</option>
+                <option value="hard">Hard (1-200)</option>
+            </select>
+        </div>
+        <div class="settings">
+            <label for="rounds">Rounds:</label>
+            <input type="number" id="rounds" value="1" min="1">
+        </div>
+        <div class="settings">
+            <label for="players">Players:</label>
+            <select id="players">
+                <option value="1" selected>1 Player</option>
+                <option value="2">2 Players</option>
+                <option value="ai">AI Opponent</option>
+            </select>
+        </div>
+        <button id="startGame">Start Game</button>
+        <div id="gameStatus">Press "Start Game" to begin</div>
+        <div id="result"></div>
+        <div id="attempts"></div>
+        <div id="hints"></div>
+        <div id="time">Time Left: <span id="timer">30</span> seconds</div>
+        <div class="input-section">
+            <button id="submitGuess">Submit Guess</button>
+            <input type="number" id="guess" placeholder="Enter your guess">
+        </div>
+        <div class="input-section">
+            <button id="switchPlayer">Switch Player</button>
+        </div>
+    </div>
+
+    <!-- Modal for winning -->
+    <div id="winModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <p id="winMessage"></p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
